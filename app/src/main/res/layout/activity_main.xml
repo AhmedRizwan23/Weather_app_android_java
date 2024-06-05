@@ -144,14 +144,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00%" />
+                    android:text="00%"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Humidity" />
+                    android:text="Humidity"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -171,14 +173,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00m/s" />
+                    android:text="00m/s"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Windspeed" />
+                    android:text="Windspeed"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -198,14 +202,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Sunny" />
+                    android:text="Sunny"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Condition" />
+                    android:text="Condition"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -225,14 +231,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00:00" />
+                    android:text="00:00"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Sunrise" />
+                    android:text="Sunrise"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -252,14 +260,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00:00" />
+                    android:text="00:00"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Sunset" />
+                    android:text="Sunset"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <LinearLayout
@@ -279,14 +289,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="00hPa" />
+                    android:text="00hPa"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:gravity="center"
-                    android:text="Sea level" />
+                    android:text="Sea level"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <androidx.constraintlayout.helper.widget.Flow
