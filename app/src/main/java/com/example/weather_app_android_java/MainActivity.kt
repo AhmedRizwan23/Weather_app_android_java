@@ -121,8 +121,7 @@ class MainActivity : AppCompatActivity() {
                 background.setBackgroundResource(R.drawable.sunny_background)
             }
 
-            "HAZE", "PARTLY CLOUDY", "CLOUDS", "OVERCAST", "FEW CLOUDS", "LIGHT CLOUDS", "OVERCAST CLOUDS", "BROKEN " +
-                    "CLOUDS" -> {
+            "HAZE", "PARTLY CLOUDY", "CLOUDS", "OVERCAST", "FEW CLOUDS", "LIGHT CLOUDS", "OVERCAST CLOUDS", "BROKEN CLOUDS" -> {
                 animationView.setAnimation(R.raw.cloud)
                 background.setBackgroundResource(R.drawable.colud_background)
             }
