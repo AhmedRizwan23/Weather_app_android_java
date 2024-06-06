@@ -2,6 +2,7 @@ package com.example.weather_app_android_java
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.SearchView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import retrofit2.Call
@@ -16,15 +17,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        fetchweather()
+        fetchweather("Lahore"); // Default city
+        val searchview = findViewById<SearchView>(R.id.searchView);
+        searchview.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                fetchweather(query.toString())
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+        })
+
     }
 
-    private fun fetchweather() {
+    private fun fetchweather(cityName: String) {
         val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
             .baseUrl("https://api.openweathermap.org/data/2.5/").build()
             .create(api_interface::class.java)
 
-        val response = retrofit.get_weather("London", "1af5ffff4e3e1675f012193ef48083de", "metric")
+        val response = retrofit.get_weather(cityName, "1af5ffff4e3e1675f012193ef48083de", "metric")
 
         response.enqueue(object : Callback<weatherapimodel> {
             override fun onResponse(
