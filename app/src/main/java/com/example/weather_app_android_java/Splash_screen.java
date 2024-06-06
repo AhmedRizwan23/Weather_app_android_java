@@ -22,6 +22,6 @@ public class Splash_screen extends AppCompatActivity {
                 startActivity(intent);
                 finish();  // Finish the splash screen activity so the user cannot return to it.
             }
-        }, 5000); // 3000 milliseconds delay (3 seconds)
+        }, 3000); // 3000 milliseconds delay (3 seconds)
     }
 }
