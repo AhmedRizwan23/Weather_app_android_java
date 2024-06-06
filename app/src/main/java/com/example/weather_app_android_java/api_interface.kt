@@ -8,10 +8,17 @@ import weatherapimodel
 interface api_interface {
 
     @GET("weather")
-    fun get_weather(
-        @Query("q") city_name: String,
-        @Query("appid") api_key: String,
-        @Query("units") units: String,
+    fun getWeatherByCity(
+        @Query("q") cityName: String,
+        @Query("appid") apiKey: String,
+        @Query("units") units: String
+    ): Call<weatherapimodel>
 
-        ): Call<weatherapimodel>
+    @GET("weather")
+    fun getWeatherByCoordinates(
+        @Query("lat") latitude: Double,
+        @Query("lon") longitude: Double,
+        @Query("appid") apiKey: String,
+        @Query("units") units: String
+    ): Call<weatherapimodel>
 }
