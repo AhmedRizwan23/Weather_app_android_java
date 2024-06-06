@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() {
                 val responsebody = response.body();
                 if (response.isSuccessful) {
                     val temperature = responsebody!!.main.temp.toString()
+                    val maxtemp = responsebody!!.main.temp_max.toString()
+                    val mintemp = responsebody!!.main.temp_min.toString()
                     val humidity = responsebody!!.main.humidity.toString()
                     val condition = responsebody!!.weather.get(0).main.toString()
                     val pressure = responsebody!!.main.pressure.toString()
@@ -58,6 +60,10 @@ class MainActivity : AppCompatActivity() {
                     val humidityy = findViewById<TextView>(R.id.humidityTextView)
                     val conditonss = findViewById<TextView>(R.id.weatherConditionTextView)
                     val pressurey = findViewById<TextView>(R.id.seaLevelTextView)
+                    val maxtemprature = findViewById<TextView>(R.id.maxTempTextView)
+                    val mintemprature = findViewById<TextView>(R.id.minTempTextView)
+                    val description_ = findViewById<TextView>(R.id.bigweatherConditionTextView)
+                    val cityname = findViewById<TextView>(R.id.locationTextView)
 //                    val windspeedy = findViewById<TextView>(R.id.windspeedTextView)
 //                    val winddirectiony = findViewById<TextView>(R.id.winddirectionTextView)
 
@@ -65,7 +71,11 @@ class MainActivity : AppCompatActivity() {
                     humidityy.text = "$humidity %"
                     conditonss.text = "$condition"
                     pressurey.text = "$pressure hPa"
-//                    windspeedy.text = "$windspeed"
+                    maxtemprature.text = "Max $maxtemp°C"
+                    mintemprature.text = "Min $mintemp°C"
+                    description_.text = "$description"
+                    cityname.text = "$name"
+//                    windspeedy.text = " $windspeed"
 //                    winddirectiony.text = "$winddirection"
                 }
             }
