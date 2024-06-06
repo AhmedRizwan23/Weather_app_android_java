@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/sunAnimation"
+        android:id="@+id/Animation"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
@@ -54,7 +54,7 @@
         android:fontFamily="@font/merriweathersans_semibold"
         android:text="Today"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sunAnimation"
+        app:layout_constraintStart_toEndOf="@+id/Animation"
         app:layout_constraintTop_toBottomOf="@+id/locationTextView" />
 
     <TextView
@@ -66,7 +66,7 @@
         android:text="000°C"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sunAnimation"
+        app:layout_constraintStart_toEndOf="@+id/Animation"
         app:layout_constraintTop_toBottomOf="@+id/cityNameTextView" />
 
     <TextView
@@ -79,10 +79,10 @@
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/sunAnimation"
+        app:layout_constraintEnd_toEndOf="@+id/Animation"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sunAnimation" />
+        app:layout_constraintTop_toBottomOf="@+id/Animation" />
 
     <TextView
         android:id="@+id/maxTempTextView"
@@ -243,7 +243,7 @@
                     app:srcCompat="@drawable/sunrise" />
 
                 <TextView
-                    android:id=" @+id/sunriseTextView"
+                    android:id="@+id/sunriseTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"

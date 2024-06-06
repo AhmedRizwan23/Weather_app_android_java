@@ -6,6 +6,7 @@ import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.airbnb.lottie.LottieAnimationView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -91,6 +92,8 @@ class MainActivity : AppCompatActivity() {
                     cityname.text = "$name"
 //                    windspeedy.text = " $windspeed"
 //                    winddirectiony.text = "$winddirection"
+
+                    setanimation(description)
                 } else {
                     // Handle the case where the response is not successful or the body is null
                     handleErrorResponse()
@@ -103,6 +106,48 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun setanimation(description: String) {
+        val animationView = findViewById<LottieAnimationView>(R.id.Animation)
+        val background =
+            findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.main)
+
+        when (description.toUpperCase()) {
+
+            "CLEAR", "CLEAR SKY", "CLEAR SCATTERED", "CLEAR BROKEN", "SUNNY" -> {
+
+                animationView.setAnimation(R.raw.sun)
+                background.setBackgroundResource(R.drawable.sunny_background)
+            }
+
+            "HAZE", "PARTLY CLOUDY", "CLOUDS", "OVERCAST", "FEW CLOUDS", "LIGHT CLOUDS", "OVERCAST CLOUDS", "BROKEN " +
+                    "CLOUDS" -> {
+                animationView.setAnimation(R.raw.cloud)
+                background.setBackgroundResource(R.drawable.colud_background)
+            }
+
+            "RAIN", "DRIZZLE", "SHOWERS", "lIGHTRAIN", "THUNDERSTORM" -> {
+                animationView.setAnimation(R.raw.rain)
+
+
+                background.setBackgroundResource(R.drawable.rain_background)
+
+            }
+
+
+            "Snow", "Heavy Snow", "BLIZZARD", "HAIL" -> {
+                animationView.setAnimation(R.raw.snow)
+                background.setBackgroundResource(R.drawable.snow_background)
+
+            }
+
+            else -> {
+                animationView.setAnimation(R.raw.snow) // A default animation in case description does not match any case
+            }
+        }
+
+        animationView.playAnimation()
     }
 
     private fun handleErrorResponse() {
