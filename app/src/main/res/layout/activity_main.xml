@@ -66,6 +66,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/merriweathersans_bold"
         android:text="000°C"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Animation"
